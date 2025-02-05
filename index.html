@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptic Hunt </title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/67/be/3d/67be3d63ae7f1f3da037ceedfdb0fc9b.jpg'); /* Replace with hosted link */
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+            color: #f0f8ff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .greeting {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            animation: fadeIn 2s ease-in-out;
+            color: #ffdf00;
+            text-shadow: 2px 2px 4px #000;
+        }
+        .emoji {
+            font-size: 3rem;
+            animation: bounce 2s infinite;
+        }
+        .riddle {
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            font-size: 1.8rem;
+            width: 80%;
+            max-width: 700px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            color: #f0e68c;
+        }
+        input[type="text"] {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #f0e68c;
+            width: 60%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            background-color: #6a5acd;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        button:hover {
+            background-color: #483d8b;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+    <script>
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        });
+
+        function checkAnswer() {
+            const answer = document.getElementById("answer").value.toLowerCase();
+            if (answer === "library") {
+                window.location.href = "step2.html"; // Replace with the actual hosted link for step 2
+            } else {
+                alert("Incorrect! Try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="greeting">
+        "Welcome to the Wizarding World Cryptic Hunt! 🪄
+Your journey begins here, brave wizard. Solve the riddles, crack the codes, and uncover the secrets of magic!
+⚡✨<br>
+        <span class="emoji">📚🧙‍♂🔮</span>
+    </div>
+    <div class="riddle">
+        Riddle:<br>
+        "Where knowledge lives and whispers reside,<br>
+        A place of study Hogwarts takes pride.<br>
+        Books are stacked and secrets lie,<br>
+        What’s the place where you’d find the spy?"
+    </div>
+    <input type="text" id="answer" placeholder="Enter your answer here...">
+    <br>
+    <button onclick="checkAnswer()">Submit</button>
+</body>
+</html>
